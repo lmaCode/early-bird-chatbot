@@ -1,9 +1,9 @@
 [![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/chatie/wechaty)
 [![Wechaty开源激励计划](https://img.shields.io/badge/Wechaty-开源激励计划-green.svg)](https://github.com/juzibot/Welcome/wiki/Everything-about-Wechaty)
 
-### 基于wechaty的求职社群管理工具
+## 基于wechaty的求职社群管理工具
 
-#### 背景
+### 背景
 
 受全球疫情的影响，今年的求职季变得很特殊，对于企业来说，缩减招聘需求成了一段时间的常态。对于求职者来说面试周期拉长、求职压力倍增。而早鸟作为专业的求职交流公益平台，在全球疫情蔓延，经济低迷的情况下，更应该助广大毕业生或求职者一臂之力。
 
@@ -47,6 +47,7 @@
 1. 加入WeChaty群聊（或其他已配置的群聊）
 2. 毒鸡汤
 3. 英语一句话
+
 如需创建群聊，请输入"创建群聊-"+群名称（例：创建群聊-求职群1）
 
 ### 目录结构
@@ -65,6 +66,7 @@
 ### 如何使用
 
 克隆仓库代码 
+[Early-Bird-ChatBot](https://github.com/lmaCode/early-bird-chatbot)
 
 安装依赖
 
