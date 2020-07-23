@@ -51,9 +51,8 @@
 如需创建群聊，请输入"创建群聊-"+群名称（例：创建群聊-求职群1）
 
 如图：
-
-![求职信息](/imgs/job.png)
-![疫情查询]](/imgs/covid.png)
+<img src="/imgs/job.png" width="100" height="300" alt="求职信息" >
+<img src="/imgs/covid.png" width="100" height="300" alt="疫情查询" >
 
 ### 目录结构
 
