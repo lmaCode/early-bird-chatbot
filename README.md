@@ -52,8 +52,8 @@
 
 如图：
 
-![1](/assets/2020/early-bird-chatbot/job.png)
-![2](/assets/2020/early-bird-chatbot/covid.png)
+![求职信息](/imgs/job.png)
+![疫情查询]](/imgs/covid.png)
 
 ### 目录结构
 
