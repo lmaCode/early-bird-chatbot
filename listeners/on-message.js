@@ -8,8 +8,8 @@ const { colorRGBtoHex, colorHex } = require("../utils");
 
 const allKeywords = `回复序号或关键字获取对应服务
 1.加入${config.WEBROOM}群聊
-2.毒鸡汤
-3.英语一句话
+2.求职信息
+3.海外疫情
 如需创建群聊，请输入"创建群聊-"+群名称（例：创建群聊-早鸟求职群1）`;
 
 /**
@@ -97,14 +97,14 @@ async function onPeopleMessage(msg) {
         console.log(bufferImage);
         await msg.say(bufferImage);
         //await msg.say(fileBox);
-    } else if (content === "毒鸡汤" || parseInt(content) === 2) {
-        let soup = await superagent.getSoup();
+    } else if (content === "求职信息" || parseInt(content) === 2) {
+        let jobInfo = await superagent.getJobInfo();
         await delay(200);
-        await msg.say(soup);
-    } else if (content === "英语一句话" || parseInt(content) === 3) {
-        const { en, zh } = await superagent.getEnglishOne();
+        await msg.say(jobInfo);
+    } else if (content === "海外疫情" || parseInt(content) === 3) {
+        let res = await superagent.getOverseaCovid();
         await delay(200);
-        await msg.say(`en：${en}<br><br>zh：${zh}`);
+        await msg.say(res);
     } else if (content === "艾特网" || content === "导航站") {
         //发送链接卡片  web版协议不可用。
         const urlLink = new UrlLink({
@@ -132,16 +132,14 @@ async function onWebRoomMessage(msg) {
     const isText = msg.type() === bot.Message.Type.Text;
     if (isText) {
         const content = msg.text().trim(); // 消息内容
-        if (content === "毒鸡汤") {
-            let poison = await superagent.getSoup();
+        if (content === "求职信息" || parseInt(content) === 2) {
+            let jobInfo = await superagent.getJobInfo();
             await delay(200);
-            await msg.say(poison);
-        } else if (content === "英语一句话") {
-            const res = await superagent.getEnglishOne();
+            await msg.say(jobInfo);
+        } else if (content === "海外疫情" || parseInt(content) === 3) {
+            let res = await superagent.getOverseaCovid();
             await delay(200);
-            await msg.say(`
-en： $ { res.en } < br > < br > zh： $ { res.zh }
-`);
+            await msg.say(res);
         } else if (content.includes("踢@")) {
             // 踢人功能  群里发送  踢@某某某  即可
             const room = msg.room();

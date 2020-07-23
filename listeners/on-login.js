@@ -27,7 +27,9 @@ async function onRoom() {
         const englishData = await superagent.getEnglishOne(); //英语一句话
         let english = `en：${englishData.en}\nzh：${englishData.zh}`;
         let poison = await superagent.getPoison(); //毒鸡汤
-        const str = `${today}\n元气满满的一天开始啦,要加油噢^_^\n\n每日一句：\n${one}\n\n英语一句话：\n${english}\n\n毒鸡汤：\n${poison}`;
+        let jobInfo = await superagent.getJobInfo(); //Job Info
+        let overseaData = await superagent.getOverseaCovid(); //Oversea Covid data
+        const str = `${today}\n元气满满的一天开始啦,要加油噢^_^\n\n求职信息：\n${jobInfo}\n\n海外疫情：\n${overseaData}`;
         await room.say(str);
     });
 }
