@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "cheerio": "^1.0.0-rc.2",
-        "firebase": "7.16.1",
+        "firebase": "10.9.0",
         "is-pr": "^1.1.0",
         "node-schedule": "^1.3.2",
         "qrcode": "^1.4.4",
